@@ -542,6 +542,7 @@ iupObjectCreate
 iupObjectGetParamList
 iupRadioFindToggleParent
 iupRegisterClass
+iupUnRegisterClass
 iupRegisterFindClass
 iupRound
 iupImageExportToFile

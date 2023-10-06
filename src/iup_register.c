@@ -85,6 +85,12 @@ IUP_SDK_API void iupRegisterClass(Iclass* ic)
   iupTableSet(iregister_table, ic->name, (void*)ic, IUPTABLE_POINTER);
 }
 
+void iupUnRegisterClass(Iclass* ic)
+{
+    iupTableRemove(iregister_table, ic->name);
+    iupClassRelease(ic);
+}
+
 void iupRegisterUpdateClasses(void)
 {
   char* name = iupTableFirst(iregister_table);

@@ -76,6 +76,8 @@ target_link_libraries (cd
     PRIVATE
         freetype
         zlibstatic)
+set_target_properties (cd PROPERTIES
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)
 
 if (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
     find_package (Cairo REQUIRED)
@@ -126,4 +128,17 @@ if (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
                 GTK2::gtk
                 GTK2::gdk_pixbuf)
     endif ()
+elseif (IUP_TOOLKIT MATCHES "Win32")
+    target_sources (cd PRIVATE
+        "src/win32/cdwclp.c"
+        "src/win32/cdwemf.c"
+        "src/win32/cdwimg.c"
+        "src/win32/cdwin.c"
+        "src/win32/cdwnative.c"
+        "src/win32/cdwprn.c"
+        "src/win32/cdwwmf.c"
+        "src/win32/wmf_emf.c"
+        "src/win32/cdwdbuf.c"
+        "src/win32/cdwdib.c")
+    target_compile_definitions (cd PRIVATE UNICODE)
 endif ()

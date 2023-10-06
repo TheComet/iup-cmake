@@ -63,6 +63,8 @@ include (CMakeDependentOption)
 
 set (IUP_TOOLKIT "${IUP_TOOLKIT}" CACHE STRING "Select which GUI toolkit to use as a driver for IUP")
 set_property (CACHE IUP_TOOLKIT PROPERTY STRINGS "OFF;GTK2;GTK3;Motif;Win32;Haiku")
+set (IUP_LIB_TYPE "SHARED" CACHE STRING "Build IUP components as DLLs/shared libraries instead of static")
+set_property (CACHE IUP_LIB_TYPE PROPERTY STRINGS "SHARED;STATIC")
 cmake_dependent_option (IUP_GDK_NULL "Completely remove X11 calls (only works for GTK3)" OFF "IUP_TOOLKIT MATCHES GTK3" OFF)
 cmake_dependent_option (IUP_NEW_DRAW "Draw driver with alpha and anti-aliasing in Windows and Linux enabled" ON "IUP_TOOLKIT" OFF)
 cmake_dependent_option (IUP_IMGLIB "Build iupimglib: Library for loading and drawing images, icons and cursors" ON "IUP_TOOLKIT" OFF)
@@ -70,17 +72,32 @@ cmake_dependent_option (IUP_IMGLIB_LARGE "Enable for large icon support" ON "IUP
 cmake_dependent_option (IUP_IM "Build image toolkit" ON "IUP_TOOLKIT" OFF)
 cmake_dependent_option (IUP_CD "Build Canvas Draw library" ON "IUP_TOOLKIT" OFF)
 cmake_dependent_option (IUP_VLED "Build VLED editor" ON "IUP_CD" OFF)
+cmake_dependent_option (IUP_EXAMPLES "Build examples" ON "IUP_IMGLIB" OFF)
+
+set (IUP_BUILD_BINDIR "bin" CACHE STRING "")
+set (IUP_BUILD_LIBDIR "lib" CACHE STRING "")
+
+set (IUP_INSTALL_BINDIR "bin" CACHE STRING "")
+set (IUP_INSTALL_LIBDIR "lib" CACHE STRING "")
+set (IUP_INSTALL_INCLUDEDIR "include" CACHE STRING "")
+set (IUP_INSTALL_CMAKEDIR "share/iup/cmake" CACHE STRING "")
 
 if (IUP_CD)
+    if (NOT TARGET freetype)
+        add_subdirectory ("thirdparty/freetype-2.10.2")
+    endif ()
+    if (NOT TARGET ftgl)
+        add_subdirectory ("thirdparty/ftgl-2.1.5")
+    endif ()
+    if (NOT TARGET cd)
+        add_subdirectory ("thirdparty/cd-5.14")
+    endif ()
+endif ()
+
+if (IUP_CD OR IUP_IM)
     if (NOT TARGET zlibstatic)
         add_subdirectory ("thirdparty/zlib-1.2.11")
     endif ()
-    add_subdirectory ("thirdparty/freetype-2.10.2")
-    add_subdirectory ("thirdparty/ftgl-2.1.5")
-    add_subdirectory ("thirdparty/cd-5.14")
-endif ()
-if (IUP_IM)
-    add_subdirectory ("thirdparty/im-3.15")
 endif ()
 
 if (IUP_TOOLKIT)
@@ -90,6 +107,7 @@ if (IUP_IMGLIB)
     add_subdirectory ("srcimglib")
 endif ()
 if (IUP_IM)
+    add_subdirectory ("thirdparty/im-3.15")
     add_subdirectory ("srcim")
 endif ()
 if (IUP_CD)
@@ -99,6 +117,32 @@ if (IUP_VLED)
     #    add_subdirectory ("srcvled")
 endif ()
 
-if (IUP_TOOLKIT AND IUP_IMGLIB)
+if (IUP_EXAMPLES)
     add_subdirectory ("examples")
 endif ()
+
+# All subprojects have added targets to this export
+# group, so make sure to install it
+install (
+    EXPORT IUPTargets
+    NAMESPACE IUP::
+    DESTINATION ${IUP_INSTALL_CMAKEDIR})
+#export (
+#    EXPORT IUPTargets
+#    NAMESPACE IUP::
+#    FILE ${IUP_BUILD_CMAKEDIR}/IUPTargets.cmake)
+
+install (
+    DIRECTORY "include/"
+    DESTINATION ${IUP_INSTALL_INCLUDEDIR})
+#install (
+#    DIRECTORY "cmake/modules/"
+#    DESTINATION ${IUP_INSTALL_CMAKEDIR}/modules)
+
+#include(CMakePackageConfigHelpers)
+#configure_package_config_file("cmake/templates/IUPConfig.cmake.in"
+#    "${IUP_BUILD_CMAKEDIR}/IUPConfig.cmake"
+#    INSTALL_DESTINATION "${IUP_INSTALL_CMAKEDIR}")
+#install(
+#    FILES "${IUP_BUILD_CMAKEDIR}/IUPConfig.cmake"
+#    DESTINATION ${IUP_INSTALL_CMAKEDIR})

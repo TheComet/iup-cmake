@@ -59,4 +59,5 @@ target_compile_definitions (freetype
 target_link_libraries (freetype
     PRIVATE
         zlibstatic)
-
+set_target_properties (freetype PROPERTIES
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)

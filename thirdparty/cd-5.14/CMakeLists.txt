@@ -74,7 +74,8 @@ target_include_directories (cd
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/svg>)
 target_link_libraries (cd
     PRIVATE
-        freetype)
+        freetype
+        zlibstatic)
 
 if (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
     find_package (Cairo REQUIRED)

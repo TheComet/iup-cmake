@@ -55,7 +55,7 @@ endif ()
 
 if (NOT IUP_TOOLKIT)
     if (CMAKE_SYSTEM_NAME MATCHES Windows)
-        set (IUP_TOOLKIT "WIN32")
+        set (IUP_TOOLKIT "Win32")
     endif ()
 endif ()
 

@@ -74,6 +74,7 @@ if (CMAKE_SYSTEM_NAME MATCHES Windows)
         ${SRCPNG})
     target_include_directories (im PRIVATE
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libpng>)
+    target_link_libraries (im PRIVATE zlibstatic)
 
     target_sources (im PRIVATE
         src/im_sysfile_win32.cpp
@@ -92,6 +93,7 @@ if (NOT EXIF_FOUND)
     target_sources (im PRIVATE
         ${SRCEXIF})
     target_compile_definitions (im PRIVATE USE_EXIF)
-    target_include_directories (im PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libexif>)
+    target_include_directories (im PRIVATE
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libexif>)
 endif ()
-

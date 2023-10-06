@@ -29,14 +29,16 @@ if (IUP_TOOLKIT MATCHES "Motif")
             MOTIF)
 elseif (IUP_TOOLKIT MATCHES "Win32")
     target_sources (iupimglib PRIVATE
+        "iup_imglib_basewin32x32.c"
+        "iup_imglib_iconswin48x48.c"
         "iup_imglib_logos48x48.c"
         "iup_imglib_logos32x32.c")
 elseif (IUP_TOOLKIT MATCHES "GTK2")
     target_sources (iupimglib PRIVATE
         "iup_imglib_logos48x48.c"
         "iup_imglib_logos32x32.c"
-            "iup_imglib_basegtk24x24.c"
-            "iup_imglib_iconsgtk48x48.c")
+        "iup_imglib_basegtk24x24.c"
+        "iup_imglib_iconsgtk48x48.c")
 elseif (IUP_TOOLKIT MATCHES "GTK3")
     target_sources (iupimglib PRIVATE
         "iup_imglib_logos48x48.c"

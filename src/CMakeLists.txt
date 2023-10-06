@@ -371,7 +371,7 @@ elseif (IUP_TOOLKIT MATCHES "Motif")
             X11::X11
             X11::Xt
             m)
-    elseif (IUP_TOOLKIT MATCHES "Win32")
+elseif (IUP_TOOLKIT MATCHES "Win32")
     target_sources (iup PRIVATE
         "win/iupwin_common.c"
         "win/iupwin_brush.c"

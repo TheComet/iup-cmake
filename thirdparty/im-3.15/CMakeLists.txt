@@ -69,12 +69,17 @@ target_include_directories (im
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libtiff>
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libjpeg>)
 
+# tif required zlib -- higher level project should include zlib before im
+target_link_libraries (im PRIVATE zlibstatic)
+
 if (CMAKE_SYSTEM_NAME MATCHES Windows)
-    target_sources (im PRIVATE
-        ${SRCPNG})
-    target_include_directories (im PRIVATE
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libpng>)
-    target_link_libraries (im PRIVATE zlibstatic)
+    find_package (PNG)
+    if (NOT PNG_FOUND)
+        target_sources (im PRIVATE
+            ${SRCPNG})
+        target_include_directories (im PRIVATE
+            $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libpng>)
+    endif ()
 
     target_sources (im PRIVATE
         src/im_sysfile_win32.cpp
@@ -97,3 +102,7 @@ if (NOT EXIF_FOUND)
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libexif>)
 endif ()
+
+set_target_properties (im PROPERTIES
+    DEBUG_POSTFIX "d"
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)

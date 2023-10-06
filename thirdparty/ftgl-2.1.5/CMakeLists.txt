@@ -54,3 +54,5 @@ target_compile_definitions (ftgl
 target_link_libraries (ftgl
     PRIVATE
         freetype)
+set_target_properties (ftgl PROPERTIES
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)

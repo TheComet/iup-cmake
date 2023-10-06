@@ -2,12 +2,42 @@ project (iupim
     VERSION ${IUP_VERSION}
     LANGUAGES C)
 
-add_library (iupim
+add_library (iupim ${IUP_LIB_TYPE}
     "iup_im.c")
+target_include_directories (iupim
+    PRIVATE
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../src>)
 target_compile_definitions (iupim
     PRIVATE
         $<$<CONFIG:Debug>:IUP_ASSERT>)
 target_link_libraries (iupim
     PRIVATE
-        iup
-        im)
+        im
+        iup)
+set_target_properties (iupim
+    PROPERTIES
+        DEBUG_POSTFIX "d"
+        MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+        RUNTIME_OUTPUT_DIRECTORY ${IUP_BUILD_BINDIR}
+        RUNTIME_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_BINDIR}
+        RUNTIME_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_BINDIR}
+        LIBRARY_OUTPUT_DIRECTORY ${IUP_BUILD_LIBDIR}
+        LIBRARY_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_LIBDIR}
+        LIBRARY_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_LIBDIR})
+
+if (CMAKE_SYSTEM_NAME MATCHES "Windows" AND IUP_LIB_TYPE MATCHES "SHARED")
+    target_sources (iupim PRIVATE "iupim.def")
+endif ()
+
+add_library (IUP::im ALIAS iupim)
+
+install (
+    TARGETS iupim
+    EXPORT IUPTargets
+    INCLUDES DESTINATION ${IUP_INSTALL_INCLUDEDIR}
+    ARCHIVE DESTINATION ${IUP_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${IUP_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${IUP_INSTALL_BINDIR})

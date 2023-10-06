@@ -27,7 +27,10 @@ IUP_SDK_API Iclass* iupRegisterFindClass(const char* name);
 /** Register a class.
  * \ingroup register */
 IUP_SDK_API void iupRegisterClass(Iclass* ic);
-                                     
+                           
+/** Unregister a class. Removes it from the registry.
+ * \ingroup register */
+IUP_SDK_API void iupUnRegisterClass(Iclass* ic);
                                      
 /* Register the internal classes. Called only from IupOpen. */
 void iupRegisterInternalClasses(void);

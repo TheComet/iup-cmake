@@ -11,7 +11,7 @@ if (IUP_TOOLKIT MATCHES "Haiku")
     enable_language (CXX)
 endif ()
 
-add_library (iup
+add_library (iup ${IUP_LIB_TYPE}
     "iup_array.h"
     "iup_assert.h"
     "iup_attrib.h"
@@ -175,12 +175,26 @@ add_library (iup
 target_include_directories (iup
     PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../include>
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-        $<INSTALL_INTERFACE:include>)
+        $<INSTALL_INTERFACE:include>
+    PRIVATE
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
 target_compile_definitions (iup
     PRIVATE
         $<$<PLATFORM_ID:Windows>:WIN32>
         $<$<CONFIG:Debug>:IUP_ASSERT>)
+set_target_properties (iup
+    PROPERTIES
+        DEBUG_POSTFIX "d"
+        MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+        RUNTIME_OUTPUT_DIRECTORY ${IUP_BUILD_BINDIR}
+        RUNTIME_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_BINDIR}
+        RUNTIME_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_BINDIR}
+        LIBRARY_OUTPUT_DIRECTORY ${IUP_BUILD_LIBDIR}
+        LIBRARY_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_LIBDIR}
+        LIBRARY_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${IUP_BUILD_LIBDIR}
+        ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${IUP_BUILD_LIBDIR})
 
 if (IUP_TOOLKIT MATCHES "Haiku")
     target_sources (iup PRIVATE
@@ -453,4 +467,19 @@ elseif (IUP_TOOLKIT MATCHES "Win32")
         target_sources (iup PRIVATE
             "win/iupwin_draw_gdi.c")
     endif ()
+
+    if (IUP_LIB_TYPE MATCHES "SHARED")
+        target_sources (iup PRIVATE "iup.def")
+        target_compile_definitions (iup PRIVATE IUP_DLL)
+    endif ()
 endif ()
+
+add_library (IUP::iup ALIAS iup)
+
+install (
+    TARGETS iup
+    EXPORT IUPTargets
+    INCLUDES DESTINATION ${IUP_INSTALL_INCLUDEDIR}
+    ARCHIVE DESTINATION ${IUP_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${IUP_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${IUP_INSTALL_BINDIR})

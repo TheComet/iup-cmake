@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1439.25pt" height="747.751pt" viewBox="0 0 3837 1994" version="1.1">
+<g>
+<pattern id="pattern0" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="3" x2="7" y2="3" style="fill:none; stroke:rgb(0,0,0); opacity:1" />
+</pattern>
+<rect x="100" y="1793" width="100" height="100" style="fill:none; stroke:rgb(128,0,128); stroke-width:3; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<polyline style="fill:none; stroke:rgb(128,0,128); stroke-width:3; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="300,1743 320,1723 350,1733 340,1793 310,1783 " />
+<line x1="0" y1="1993" x2="3836" y2="0" style="fill:none; stroke:rgb(255,0,0); stroke-width:3; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:20, 15, 5, 5; opacity:1" />
+<line x1="0" y1="0" x2="3836" y2="1993" style="fill:none; stroke:rgb(0,0,255); stroke-width:10; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:2,2; opacity:1" />
+<path d="M3737,1893 L3769.14,1854.7 A50,50 0 0,0 3687,1893 Z" style="fill:rgb(255,0,255); stroke:none; opacity:1" />
+<path d="M132.139,1854.7 A50,50 0 0,0 50,1893" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<rect x="1818" y="896" width="200" height="200" style="fill:rgb(255,255,0); stroke:none; opacity:1" />
+<polygon style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="1892,1293 2089,753 1945,700 1748,1241 1892,1293 " />
+<text transform="matrix(0.34202 -0.939693 0.939693 0.34202 1882 983)" font-family="Times" font-size="24pt" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="middle" dominant-baseline="middle" fill="rgb(0,0,255)">
+&#x53;&#x69;&#x6D;&#x70;&#x6C;&#x65;&#x20;&#x44;&#x72;&#x61;&#x77;&#x20;&#x28;&#x70;&#x2D;&#xE7;&#xE3;&#xED;&#x29;
+</text>
+<text transform="matrix(0.34202 -0.939693 0.939693 0.34202 1954 1009)" font-family="Times" font-size="24pt" font-style="normal" font-weight="bold" text-decoration="none" text-anchor="middle" dominant-baseline="middle" fill="rgb(0,0,255)">
+&#x53;&#x65;&#x63;&#x6F;&#x6E;&#x64;&#x20;&#x4C;&#x69;&#x6E;&#x65;
+</text>
+<rect x="398.696" y="996.5" width="199.348" height="199.3" style="fill:rgb(0,0,255); stroke:none; opacity:1" />
+<line x1="398.696" y1="1195.8" x2="598.044" y2="996.5" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<polygon style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="378.761,1382.64 617.979,1382.64 617.979,1208.26 378.761,1208.26 378.761,1382.64 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="378.761,1243.13 403.68,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="428.598,1243.13 403.68,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="428.598,1243.13 453.517,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="478.435,1243.13 453.517,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="488.403,1243.13 488.403,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="488.403,1243.13 523.289,1243.13 538.24,1248.12 548.207,1258.08 553.191,1268.05 558.174,1282.99 558.174,1307.91 553.191,1322.85 548.207,1332.82 538.24,1342.78 523.289,1347.77 488.403,1347.77 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="593.06,1243.13 598.044,1248.12 603.028,1243.13 598.044,1238.15 593.06,1243.13 " />
+<polyline style="fill:none; stroke:rgb(255,0,0); stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" points="598.044,1278.01 598.044,1362.71 593.06,1377.66 583.093,1382.64 573.126,1382.64 " />
+<pattern id="pattern1" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="0" x2="7" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+<line x1="7" y1="0" x2="0" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<path d="M 2118 996 L 2148 946 L 2168 946 C 2218 846 2248 796 2248 846 C 2248 896 2218 946 2368 946 L 2368 1046 L 2304.6 1021 A 100 50 0 0 1 2119.52 1004.68 " style="fill:url(#pattern1); fill-rule:evenodd; stroke:rgb(0,255,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<path d="M2119.52,1004.68 A100,50 0 0,0 2304.6,1021" style="fill:none; stroke:rgb(0,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<rect x="2118" y="946" width="200" height="100" style="fill:none; stroke:rgb(128,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<circle cx="10" cy="996" r="0.5" style="fill:rgb(255,0,0); stroke:none; opacity:1" />
+<circle cx="11" cy="995" r="0.5" style="fill:rgb(0,255,0); stroke:none; opacity:1" />
+<circle cx="12" cy="994" r="0.5" style="fill:rgb(0,0,255); stroke:none; opacity:1" />
+<circle cx="13" cy="993" r="0.5" style="fill:rgb(255,0,0); stroke:none; opacity:1" />
+<circle cx="14" cy="992" r="0.5" style="fill:rgb(0,255,0); stroke:none; opacity:1" />
+<circle cx="15" cy="991" r="0.5" style="fill:rgb(0,0,255); stroke:none; opacity:1" />
+<line x1="185" y1="1793" x2="215" y2="1793" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<line x1="200" y1="1808" x2="200" y2="1778" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<ellipse cx="3637" cy="1793" rx="15" ry="15" style="fill:rgb(255,0,0); stroke:none; opacity:1" />
+<ellipse cx="200" cy="199" rx="15" ry="15" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<polygon style="fill:rgb(255,0,0); fill-rule:evenodd; stroke:none; opacity:1" points="3622,199 3637,214 3652,199 3637,184 " />
+<line x1="0" y1="1983" x2="3837" y2="1983" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:0; opacity:1" />
+<line x1="0" y1="1973" x2="3837" y2="1973" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:6,2; opacity:1" />
+<line x1="0" y1="1963" x2="3837" y2="1963" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:2,2; opacity:1" />
+<line x1="0" y1="1953" x2="3837" y2="1953" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:6,2,2,2; opacity:1" />
+<line x1="0" y1="1943" x2="3837" y2="1943" style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:6,2,2,2,2,2; opacity:1" />
+<pattern id="pattern2" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="3" x2="7" y2="3" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="0" y="-1" width="50" height="60" style="fill:url(#pattern2); stroke:none; opacity:1" />
+<pattern id="pattern3" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="3" y1="0" x2="3" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="50" y="-1" width="50" height="60" style="fill:url(#pattern3); stroke:none; opacity:1" />
+<pattern id="pattern4" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="0" x2="7" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="100" y="-1" width="50" height="60" style="fill:url(#pattern4); stroke:none; opacity:1" />
+<pattern id="pattern5" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="7" x2="7" y2="0" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="150" y="-1" width="50" height="60" style="fill:url(#pattern5); stroke:none; opacity:1" />
+<pattern id="pattern6" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="7" y1="0" x2="7" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+<line x1="0" y1="3" x2="7" y2="3" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="200" y="-1" width="50" height="60" style="fill:url(#pattern6); stroke:none; opacity:1" />
+<pattern id="pattern7" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="0" x2="7" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+<line x1="7" y1="0" x2="0" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<rect x="250" y="-1" width="50" height="60" style="fill:url(#pattern7); stroke:none; opacity:1" />
+<polygon style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:6,2,2,2,2,2; opacity:1" points="1918,99 1968,149 1918,199 1868,149 1918,99 " />
+<pattern id="pattern8" patternUnits="userSpaceOnUse" x="0" y="0" width="7" height="7">
+<line x1="0" y1="0" x2="7" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+<line x1="7" y1="0" x2="0" y2="7" style="fill:none; stroke:rgb(255,0,0); opacity:1" />
+</pattern>
+<polygon style="fill:url(#pattern8); fill-rule:evenodd; stroke:none; opacity:1" points="100,996 150,946 200,996 150,1046 " />
+<pattern id="pattern9" patternUnits="userSpaceOnUse" x="0" y="0" width="10" height="10">
+<rect x="0" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="2" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="3" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="4" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="5" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="6" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="7" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="8" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="9" y="0" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="1" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="1" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="2" y="1" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="3" y="1" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="4" y="1" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="5" y="1" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="6" y="1" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="7" y="1" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="8" y="1" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="9" y="1" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="2" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="2" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="2" y="2" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="3" y="2" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="4" y="2" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="5" y="2" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="6" y="2" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="7" y="2" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="8" y="2" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="9" y="2" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="3" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="3" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="2" y="3" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="3" y="3" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="4" y="3" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="5" y="3" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="6" y="3" width="1" height="1" style="fill:rgb(0,255,0); opacity:1" />
+<rect x="7" y="3" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="8" y="3" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="9" y="3" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="4" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="2" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="3" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="5" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="6" y="4" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="7" y="4" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="8" y="4" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="9" y="4" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="5" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="2" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="3" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="5" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="6" y="5" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="7" y="5" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="8" y="5" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="9" y="5" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="6" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="2" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="3" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="5" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="6" y="6" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="7" y="6" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="8" y="6" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="9" y="6" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="7" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="2" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="3" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="5" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="6" y="7" width="1" height="1" style="fill:rgb(0,0,255); opacity:1" />
+<rect x="7" y="7" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="8" y="7" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="9" y="7" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="8" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="2" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="3" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="5" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="6" y="8" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="7" y="8" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="8" y="8" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="9" y="8" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="0" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="1" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="2" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="3" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="4" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="5" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="6" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="7" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="8" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+<rect x="9" y="9" width="1" height="1" style="fill:rgb(255,255,255); opacity:1" />
+</pattern>
+<polygon style="fill:url(#pattern9); fill-rule:evenodd; stroke:none; opacity:1" points="3737,996 3687,946 3637,996 3687,1046 " />
+<pattern id="pattern10" patternUnits="userSpaceOnUse" x="0" y="0" width="10" height="10">
+<rect x="0" y="0" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="0" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="0" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="1" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="1" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="1" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="2" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="2" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="2" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="3" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="3" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="3" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="4" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="5" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="6" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="7" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="8" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="0" y="9" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="4" y="9" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+<rect x="8" y="9" width="1" height="1" style="fill:rgb(255,0,0); opacity:1" />
+</pattern>
+<polygon style="fill:url(#pattern10); fill-rule:evenodd; stroke:none; opacity:1" points="1918,1893 1968,1843 1918,1793 1868,1843 " />
+<path d="M100,1893 C150,1793 180,1743 180,1793 180,1843 150,1893 300,1893 " style="fill:none; stroke:rgb(255,0,0); stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:6,2,2,2,2,2; opacity:1" />
+<image transform="matrix(1 0 0 1 3437 209)" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUAAABfj1//X1+mDFJGAAAALklEQVR4Ae3JQQ0AIAwEMExgAj3gkaASAzcDS/vtqM2TbWOMaTvrZdcYY9pO6QM9L58h7ju9tgAAAABJRU5ErkJggg=="/>
+</g>
+</svg>

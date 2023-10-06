@@ -1,0 +1,7 @@
+run Doxywizard
+replace h3> por h4>
+replace h2> por h3>
+replace h1> por h2>
+edit modules.html
+  <h2>Modules</h2> => <h1>Additional Reference</h1>
+  <title>IM: Module Index</title> => <title>Additional Reference</title>

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A761929-07C3-48BD-8E4A-B37EC5C72C42}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\obj\Debug\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\lib\Debug_64\</OutDir>
+    <IntDir>..\obj\Debug_64\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../src;../src/libtiff;../src/libjpeg;../../zlib/include;../src/libexif;../src/libpng;../src/liblzf;../src/lz4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;USE_EXIF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>..\lib/im.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0416</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../src;../src/libtiff;../src/libjpeg;../../zlib/include;../src/libexif;../src/libpng;../src/liblzf;../src/lz4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;USE_EXIF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>..\lib/im.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0416</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\src\im.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\im_attrib.cpp" />
+    <ClCompile Include="..\src\im_bin.cpp" />
+    <ClCompile Include="..\src\im_binfile.cpp" />
+    <ClCompile Include="..\src\im_colorhsi.cpp" />
+    <ClCompile Include="..\src\im_colormode.cpp" />
+    <ClCompile Include="..\src\im_colorutil.cpp" />
+    <ClCompile Include="..\src\im_compress.cpp" />
+    <ClCompile Include="..\src\im_convertbitmap.cpp" />
+    <ClCompile Include="..\src\im_convertcolor.cpp" />
+    <ClCompile Include="..\src\im_convertopengl.cpp" />
+    <ClCompile Include="..\src\im_converttype.cpp" />
+    <ClCompile Include="..\src\im_counter.cpp" />
+    <ClCompile Include="..\src\im_datatype.cpp" />
+    <ClCompile Include="..\src\im_file.cpp" />
+    <ClCompile Include="..\src\im_filebuffer.cpp" />
+    <ClCompile Include="..\src\im_fileraw.cpp" />
+    <ClCompile Include="..\src\im_format.cpp" />
+    <ClCompile Include="..\src\im_format_all.cpp" />
+    <ClCompile Include="..\src\im_format_pfm.cpp" />
+    <ClCompile Include="..\src\im_image.cpp" />
+    <ClCompile Include="..\src\im_lib.cpp" />
+    <ClCompile Include="..\src\im_palette.cpp" />
+    <ClCompile Include="..\src\im_rgb2map.cpp" />
+    <ClCompile Include="..\src\im_str.cpp" />
+    <ClCompile Include="..\src\im_old.cpp" />
+    <ClCompile Include="..\src\im_oldcolor.c" />
+    <ClCompile Include="..\src\im_oldresize.c" />
+    <ClCompile Include="..\src\tiff_binfile.c" />
+    <ClCompile Include="..\src\libtiff\tif_aux.c" />
+    <ClCompile Include="..\src\libtiff\tif_close.c" />
+    <ClCompile Include="..\src\libtiff\tif_codec.c" />
+    <ClCompile Include="..\src\libtiff\tif_color.c" />
+    <ClCompile Include="..\src\libtiff\tif_compress.c" />
+    <ClCompile Include="..\src\libtiff\tif_dir.c" />
+    <ClCompile Include="..\src\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="..\src\libtiff\tif_dirread.c" />
+    <ClCompile Include="..\src\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="..\src\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="..\src\libtiff\tif_error.c" />
+    <ClCompile Include="..\src\libtiff\tif_extension.c" />
+    <ClCompile Include="..\src\libtiff\tif_fax3.c" />
+    <ClCompile Include="..\src\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="..\src\libtiff\tif_flush.c" />
+    <ClCompile Include="..\src\libtiff\tif_getimage.c" />
+    <ClCompile Include="..\src\libtiff\tif_jpeg.c" />
+    <ClCompile Include="..\src\libtiff\tif_luv.c" />
+    <ClCompile Include="..\src\libtiff\tif_lzw.c" />
+    <ClCompile Include="..\src\libtiff\tif_next.c" />
+    <ClCompile Include="..\src\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="..\src\libtiff\tif_open.c" />
+    <ClCompile Include="..\src\libtiff\tif_packbits.c" />
+    <ClCompile Include="..\src\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="..\src\libtiff\tif_predict.c" />
+    <ClCompile Include="..\src\libtiff\tif_print.c" />
+    <ClCompile Include="..\src\libtiff\tif_read.c" />
+    <ClCompile Include="..\src\libtiff\tif_strip.c" />
+    <ClCompile Include="..\src\libtiff\tif_swab.c" />
+    <ClCompile Include="..\src\libtiff\tif_thunder.c" />
+    <ClCompile Include="..\src\libtiff\tif_tile.c" />
+    <ClCompile Include="..\src\libtiff\tif_version.c" />
+    <ClCompile Include="..\src\libtiff\tif_warning.c" />
+    <ClCompile Include="..\src\libtiff\tif_write.c" />
+    <ClCompile Include="..\src\libtiff\tif_zip.c" />
+    <ClCompile Include="..\src\libjpeg\jaricom.c" />
+    <ClCompile Include="..\src\libjpeg\jcapimin.c" />
+    <ClCompile Include="..\src\libjpeg\jcapistd.c" />
+    <ClCompile Include="..\src\libjpeg\jcarith.c" />
+    <ClCompile Include="..\src\libjpeg\jccoefct.c" />
+    <ClCompile Include="..\src\libjpeg\jccolor.c" />
+    <ClCompile Include="..\src\libjpeg\jcdctmgr.c" />
+    <ClCompile Include="..\src\libjpeg\jchuff.c" />
+    <ClCompile Include="..\src\libjpeg\jcinit.c" />
+    <ClCompile Include="..\src\libjpeg\jcmainct.c" />
+    <ClCompile Include="..\src\libjpeg\jcmarker.c" />
+    <ClCompile Include="..\src\libjpeg\jcmaster.c" />
+    <ClCompile Include="..\src\libjpeg\jcomapi.c" />
+    <ClCompile Include="..\src\libjpeg\jcparam.c" />
+    <ClCompile Include="..\src\libjpeg\jcprepct.c" />
+    <ClCompile Include="..\src\libjpeg\jcsample.c" />
+    <ClCompile Include="..\src\libjpeg\jctrans.c" />
+    <ClCompile Include="..\src\libjpeg\jdapimin.c" />
+    <ClCompile Include="..\src\libjpeg\jdapistd.c" />
+    <ClCompile Include="..\src\libjpeg\jdarith.c" />
+    <ClCompile Include="..\src\libjpeg\jdatadst.c" />
+    <ClCompile Include="..\src\libjpeg\jdatasrc.c" />
+    <ClCompile Include="..\src\libjpeg\jdcoefct.c" />
+    <ClCompile Include="..\src\libjpeg\jdcolor.c" />
+    <ClCompile Include="..\src\libjpeg\jddctmgr.c" />
+    <ClCompile Include="..\src\libjpeg\jdhuff.c" />
+    <ClCompile Include="..\src\libjpeg\jdinput.c" />
+    <ClCompile Include="..\src\libjpeg\jdmainct.c" />
+    <ClCompile Include="..\src\libjpeg\jdmarker.c" />
+    <ClCompile Include="..\src\libjpeg\jdmaster.c" />
+    <ClCompile Include="..\src\libjpeg\jdmerge.c" />
+    <ClCompile Include="..\src\libjpeg\jdpostct.c" />
+    <ClCompile Include="..\src\libjpeg\jdsample.c" />
+    <ClCompile Include="..\src\libjpeg\jdtrans.c" />
+    <ClCompile Include="..\src\libjpeg\jerror.c" />
+    <ClCompile Include="..\src\libjpeg\jfdctflt.c" />
+    <ClCompile Include="..\src\libjpeg\jfdctfst.c" />
+    <ClCompile Include="..\src\libjpeg\jfdctint.c" />
+    <ClCompile Include="..\src\libjpeg\jidctflt.c" />
+    <ClCompile Include="..\src\libjpeg\jidctfst.c" />
+    <ClCompile Include="..\src\libjpeg\jidctint.c" />
+    <ClCompile Include="..\src\libjpeg\jmemmgr.c" />
+    <ClCompile Include="..\src\libjpeg\jmemnobs.c" />
+    <ClCompile Include="..\src\libjpeg\jquant1.c" />
+    <ClCompile Include="..\src\libjpeg\jquant2.c" />
+    <ClCompile Include="..\src\libjpeg\jutils.c" />
+    <ClCompile Include="..\src\libexif\exif-byte-order.c" />
+    <ClCompile Include="..\src\libexif\exif-content.c" />
+    <ClCompile Include="..\src\libexif\exif-data.c" />
+    <ClCompile Include="..\src\libexif\exif-entry.c" />
+    <ClCompile Include="..\src\libexif\exif-format.c" />
+    <ClCompile Include="..\src\libexif\exif-ifd.c" />
+    <ClCompile Include="..\src\libexif\exif-loader.c" />
+    <ClCompile Include="..\src\libexif\exif-log.c" />
+    <ClCompile Include="..\src\libexif\exif-mem.c" />
+    <ClCompile Include="..\src\libexif\canon\exif-mnote-data-canon.c" />
+    <ClCompile Include="..\src\libexif\fuji\exif-mnote-data-fuji.c" />
+    <ClCompile Include="..\src\libexif\olympus\exif-mnote-data-olympus.c" />
+    <ClCompile Include="..\src\libexif\pentax\exif-mnote-data-pentax.c" />
+    <ClCompile Include="..\src\libexif\exif-mnote-data.c" />
+    <ClCompile Include="..\src\libexif\exif-tag.c" />
+    <ClCompile Include="..\src\libexif\exif-utils.c" />
+    <ClCompile Include="..\src\libexif\canon\mnote-canon-entry.c" />
+    <ClCompile Include="..\src\libexif\canon\mnote-canon-tag.c" />
+    <ClCompile Include="..\src\libexif\fuji\mnote-fuji-entry.c" />
+    <ClCompile Include="..\src\libexif\fuji\mnote-fuji-tag.c" />
+    <ClCompile Include="..\src\libexif\olympus\mnote-olympus-entry.c" />
+    <ClCompile Include="..\src\libexif\olympus\mnote-olympus-tag.c" />
+    <ClCompile Include="..\src\libexif\pentax\mnote-pentax-entry.c" />
+    <ClCompile Include="..\src\libexif\pentax\mnote-pentax-tag.c" />
+    <ClCompile Include="..\src\im_format_bmp.cpp" />
+    <ClCompile Include="..\src\im_format_gif.cpp" />
+    <ClCompile Include="..\src\im_format_ico.cpp" />
+    <ClCompile Include="..\src\im_format_jpeg.cpp" />
+    <ClCompile Include="..\src\im_format_krn.cpp" />
+    <ClCompile Include="..\src\im_format_led.cpp" />
+    <ClCompile Include="..\src\im_format_pcx.cpp" />
+    <ClCompile Include="..\src\im_format_png.cpp" />
+    <ClCompile Include="..\src\im_format_pnm.cpp" />
+    <ClCompile Include="..\src\im_format_ras.cpp" />
+    <ClCompile Include="..\src\im_format_raw.cpp" />
+    <ClCompile Include="..\src\im_format_sgi.cpp" />
+    <ClCompile Include="..\src\im_format_tga.cpp" />
+    <ClCompile Include="..\src\im_format_tiff.cpp" />
+    <ClCompile Include="..\src\liblzf\lzf_c.c" />
+    <ClCompile Include="..\src\liblzf\lzf_d.c" />
+    <ClCompile Include="..\src\lz4\lz4.c" />
+    <ClCompile Include="..\src\libpng\png.c" />
+    <ClCompile Include="..\src\libpng\pngerror.c" />
+    <ClCompile Include="..\src\libpng\pngget.c" />
+    <ClCompile Include="..\src\libpng\pngmem.c" />
+    <ClCompile Include="..\src\libpng\pngpread.c" />
+    <ClCompile Include="..\src\libpng\pngread.c" />
+    <ClCompile Include="..\src\libpng\pngrio.c" />
+    <ClCompile Include="..\src\libpng\pngrtran.c" />
+    <ClCompile Include="..\src\libpng\pngrutil.c" />
+    <ClCompile Include="..\src\libpng\pngset.c" />
+    <ClCompile Include="..\src\libpng\pngtrans.c" />
+    <ClCompile Include="..\src\libpng\pngwio.c" />
+    <ClCompile Include="..\src\libpng\pngwrite.c" />
+    <ClCompile Include="..\src\libpng\pngwtran.c" />
+    <ClCompile Include="..\src\libpng\pngwutil.c" />
+    <ClCompile Include="..\src\im_dib.cpp" />
+    <ClCompile Include="..\src\im_dibxbitmap.cpp" />
+    <ClCompile Include="..\src\im_sysfile_win32.cpp" />
+    <ClCompile Include="..\src\im_sysfile_unix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\libtiff\t4.h" />
+    <ClInclude Include="..\src\libtiff\tif_config.h" />
+    <ClInclude Include="..\src\libtiff\tif_dir.h" />
+    <ClInclude Include="..\src\libtiff\tif_fax3.h" />
+    <ClInclude Include="..\src\libtiff\tif_predict.h" />
+    <ClInclude Include="..\src\libtiff\tiff.h" />
+    <ClInclude Include="..\src\libtiff\tiffio.h" />
+    <ClInclude Include="..\src\libtiff\tiffiop.h" />
+    <ClInclude Include="..\src\libtiff\tiffvers.h" />
+    <ClInclude Include="..\src\libtiff\uvcode.h" />
+    <ClInclude Include="..\src\libjpeg\jchuff.h" />
+    <ClInclude Include="..\src\libjpeg\jconfig.h" />
+    <ClInclude Include="..\src\libjpeg\jdct.h" />
+    <ClInclude Include="..\src\libjpeg\jdhuff.h" />
+    <ClInclude Include="..\src\libjpeg\jerror.h" />
+    <ClInclude Include="..\src\libjpeg\jinclude.h" />
+    <ClInclude Include="..\src\libjpeg\jmemsys.h" />
+    <ClInclude Include="..\src\libjpeg\jmorecfg.h" />
+    <ClInclude Include="..\src\libjpeg\jpegint.h" />
+    <ClInclude Include="..\src\libjpeg\jpeglib.h" />
+    <ClInclude Include="..\src\libjpeg\jversion.h" />
+    <ClInclude Include="..\src\libexif\_stdint.h" />
+    <ClInclude Include="..\src\libexif\config.h" />
+    <ClInclude Include="..\src\libexif\exif-byte-order.h" />
+    <ClInclude Include="..\src\libexif\exif-content.h" />
+    <ClInclude Include="..\src\libexif\exif-data-type.h" />
+    <ClInclude Include="..\src\libexif\exif-data.h" />
+    <ClInclude Include="..\src\libexif\exif-entry.h" />
+    <ClInclude Include="..\src\libexif\exif-format.h" />
+    <ClInclude Include="..\src\libexif\exif-ifd.h" />
+    <ClInclude Include="..\src\libexif\exif-loader.h" />
+    <ClInclude Include="..\src\libexif\exif-log.h" />
+    <ClInclude Include="..\src\libexif\exif-mem.h" />
+    <ClInclude Include="..\src\libexif\canon\exif-mnote-data-canon.h" />
+    <ClInclude Include="..\src\libexif\fuji\exif-mnote-data-fuji.h" />
+    <ClInclude Include="..\src\libexif\olympus\exif-mnote-data-olympus.h" />
+    <ClInclude Include="..\src\libexif\pentax\exif-mnote-data-pentax.h" />
+    <ClInclude Include="..\src\libexif\exif-mnote-data-priv.h" />
+    <ClInclude Include="..\src\libexif\exif-mnote-data.h" />
+    <ClInclude Include="..\src\libexif\exif-system.h" />
+    <ClInclude Include="..\src\libexif\exif-tag.h" />
+    <ClInclude Include="..\src\libexif\exif-utils.h" />
+    <ClInclude Include="..\src\libexif\i18n.h" />
+    <ClInclude Include="..\src\libexif\canon\mnote-canon-entry.h" />
+    <ClInclude Include="..\src\libexif\canon\mnote-canon-tag.h" />
+    <ClInclude Include="..\src\libexif\fuji\mnote-fuji-entry.h" />
+    <ClInclude Include="..\src\libexif\fuji\mnote-fuji-tag.h" />
+    <ClInclude Include="..\src\libexif\olympus\mnote-olympus-entry.h" />
+    <ClInclude Include="..\src\libexif\olympus\mnote-olympus-tag.h" />
+    <ClInclude Include="..\src\libexif\pentax\mnote-pentax-entry.h" />
+    <ClInclude Include="..\src\libexif\pentax\mnote-pentax-tag.h" />
+    <ClInclude Include="..\src\lz4\lz4.h" />
+    <ClInclude Include="..\src\liblzf\lzf.h" />
+    <ClInclude Include="..\src\liblzf\lzfP.h" />
+    <ClInclude Include="..\src\libpng\png.h" />
+    <ClInclude Include="..\src\libpng\pngconf.h" />
+    <ClInclude Include="..\src\libpng\pngdebug.h" />
+    <ClInclude Include="..\src\libpng\pnginfo.h" />
+    <ClInclude Include="..\src\libpng\pnglibconf.h" />
+    <ClInclude Include="..\src\libpng\pngpriv.h" />
+    <ClInclude Include="..\src\libpng\pngstruct.h" />
+    <ClInclude Include="..\include\im.h" />
+    <ClInclude Include="..\include\im_attrib.h" />
+    <ClInclude Include="..\include\im_attrib_flat.h" />
+    <ClInclude Include="..\include\im_binfile.h" />
+    <ClInclude Include="..\include\im_color.h" />
+    <ClInclude Include="..\include\im_colorhsi.h" />
+    <ClInclude Include="..\include\im_complex.h" />
+    <ClInclude Include="..\include\im_convert.h" />
+    <ClInclude Include="..\include\im_counter.h" />
+    <ClInclude Include="..\include\im_dib.h" />
+    <ClInclude Include="..\include\im_file.h" />
+    <ClInclude Include="..\include\im_format.h" />
+    <ClInclude Include="..\include\im_format_all.h" />
+    <ClInclude Include="..\include\im_format_raw.h" />
+    <ClInclude Include="..\include\im_image.h" />
+    <ClInclude Include="..\include\im_lib.h" />
+    <ClInclude Include="..\include\im_math.h" />
+    <ClInclude Include="..\include\im_math_op.h" />
+    <ClInclude Include="..\include\im_palette.h" />
+    <ClInclude Include="..\include\im_plus.h" />
+    <ClInclude Include="..\include\im_raw.h" />
+    <ClInclude Include="..\include\im_util.h" />
+    <ClInclude Include="..\include\im_old.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

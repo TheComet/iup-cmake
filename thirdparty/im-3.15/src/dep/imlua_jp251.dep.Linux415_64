@@ -1,0 +1,4 @@
+$(OBJDIR)/imlua_jp2.o: lua5/imlua_jp2.c ../include/im.h ../include/im_image.h \
+ ../include/im_format_jp2.h /tecgraf/lua5.1/include/lua.h \
+ /tecgraf/lua5.1/include/luaconf.h /tecgraf/lua5.1/include/lauxlib.h \
+ /tecgraf/lua5.1/include/lua.h ../include/imlua.h lua5/imlua_aux.h

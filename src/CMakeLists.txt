@@ -2,7 +2,12 @@ project ("iup"
     LANGUAGES C
     VERSION ${IUP_VERSION})
 
-if (USE_HAIKU)
+# Windows 7 minimum
+set (WIN32VER "0x0601")
+# OLD Windows XP Minimum
+# set (WIN32VER "0x0501")
+
+if (IUP_TOOLKIT MATCHES "Haiku")
     enable_language (CXX)
 endif ()
 
@@ -170,15 +175,14 @@ add_library (iup
 target_include_directories (iup
     PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../include>
-        $<INSTALL_INTERFACE:include>
-    PRIVATE
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:include>)
 target_compile_definitions (iup
     PRIVATE
         $<$<PLATFORM_ID:Windows>:WIN32>
         $<$<CONFIG:Debug>:IUP_ASSERT>)
 
-if (USE_HAIKU)
+if (IUP_TOOLKIT MATCHES "Haiku")
     target_sources (iup PRIVATE
         "haiku/iuphaiku_button.cpp"
         "haiku/iuphaiku_canvas.cpp"
@@ -212,14 +216,162 @@ if (USE_HAIKU)
         "haiku/iuphaiku_val.cpp"
         "gtk/iupgtk_draw_cairo.c"
         "gtk/iupgtk_key.c")
-endif ()
+elseif (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
+    target_sources (iup PRIVATE
+        "gtk/iupgtk_focus.c"
+        "gtk/iupgtk_clipboard.c"
+        "gtk/iupgtk_val.c"
+        "gtk/iupgtk_globalattrib.c"
+        "gtk/iupgtk_key.c"
+        "gtk/iupgtk_tips.c"
+        "gtk/iupgtk_loop.c"
+        "gtk/iupgtk_open.c"
+        "gtk/iupgtk_messagedlg.c"
+        "gtk/iupgtk_timer.c"
+        "gtk/iupgtk_label.c"
+        "gtk/iupgtk_font.c"
+        "gtk/iupgtk_fontdlg.c"
+        "gtk/iupgtk_filedlg.c"
+        "gtk/iupgtk_button.c"
+        "gtk/iupgtk_toggle.c"
+        "gtk/iupgtk_dragdrop.c"
+        "gtk/iupgtk_text.c"
+        "gtk/iupgtk_frame.c"
+        "gtk/iupgtk_progressbar.c"
+        "gtk/iupgtk_tabs.c"
+        "gtk/iupgtk_list.c"
+        "gtk/iupgtk_tree.c"
+        "gtk/iupgtk_canvas.c"
+        "gtk/iupgtk_image.c"
+        "gtk/iupgtk_dialog.c"
+        "gtk/iupgtk_common.c"
+        "gtk/iupgtk_str.c"
+        "gtk/iupgtk_menu.c"
+        "gtk/iupgtk_calendar.c"
+        "iup_datepick.c")
+    target_compile_definitions (iup
+        PRIVATE
+            GTK_DISABLE_DEPRECATED)
 
-if (USE_WIN32)
-    # Windows 7 minimum
-    set (WIN32VER "0x0601")
-    # OLD Windows XP Minimum
-    # set (WIN32VER "0x0501")
-    
+    if (IUP_TOOLKIT MATCHES "GTK3")
+        find_package (GTK3 REQUIRED)
+        target_include_directories (iup PRIVATE ${GTK3_INCLUDE_DIRS})
+        target_link_libraries (iup PRIVATE ${GTK3_LIBRARIES})
+        target_compile_definitions (iup
+            PRIVATE
+                GDK_DISABLE_DEPRECATED
+                GSEAL_ENABLE)
+        if (USE_NEW_DRAW)
+            target_sources (iup PRIVATE
+                "gtk/iupgtk_draw_cairo.c")
+        endif ()
+    else ()
+        find_package (GTK2 REQUIRED)
+        target_link_libraries (iup PRIVATE GTK2::gtk)
+
+        if (IUP_NEW_DRAW)
+            target_sources (iup PRIVATE
+                "gtk/iupgtk_draw_cairo.c")
+        else ()
+            target_sources (iup PRIVATE
+                "gtk/iupgtk_draw_gdk.c")
+        endif ()
+    endif ()
+
+    if (CMAKE_PLATFORM_ID MATCHES Windows)
+        target_compile_definitions (iup PRIVATE
+            _WIN32_WINNT=${WIN32VER} _WIN32_IE=0x0600 WINVER=${WIN32VER} NOTREEVIEW)
+    else ()
+        if (CMAKE_PLATFORM_ID MATCHES Darwin)
+            target_sources (iup PRIVATE
+                "gtk/iupmac_help.c"
+                "gtk/iupmac_info.c")
+            target_compile_definitions (iup PRIVATE GTK_MAC)
+        else ()
+            if (GDK_NULL)
+                #to completely remove X11 calls
+                # works only for GTK3
+                target_compile_definitions (iup PRIVATE GDK_NULL)
+            else ()
+                find_package (X11 REQUIRED)
+                target_link_libraries (iup
+                    PRIVATE
+                        X11::X11
+                        X11::Xt
+                        m)
+            endif ()
+            target_sources (iup PRIVATE
+                "gtk/iupgtk_help.c"
+                "mot/iupunix_info.c")
+
+            if (IUP_TOOLKIT MATCHES "GTK3")
+                target_sources (iup PRIVATE
+                    "gtk/iupgtk_info.c")
+            else ()
+                # Because of iupdrvGetScreenSize limitation
+                if (GDK_NULL)
+                    target_sources (iup PRIVATE
+                        "gtk/iupgtk_info.c")
+                else ()
+                    target_sources (iup PRIVATE
+                        "mot/iupx11_info.c")
+                endif ()
+            endif ()
+        endif ()
+    endif ()
+elseif (IUP_TOOLKIT MATCHES "Motif")
+    find_package (Motif REQUIRED)
+    find_package (X11 REQUIRED)
+
+    target_sources (iup PRIVATE
+        "mot/iupmot_common.c"
+        "mot/iupmot_color.c"
+        "mot/iupmot_focus.c"
+        "mot/iupmot_font.c"
+        "mot/iupmot_key.c"
+        "mot/iupmot_loop.c"
+        "mot/iupmot_open.c"
+        "mot/iupmot_tips.c"
+        "mot/iupmot_globalattrib.c"
+        "mot/iupmot_dialog.c"
+        "mot/iupmot_messagedlg.c"
+        "mot/iupmot_draw_x11.c"
+        "mot/iupmot_timer.c"
+        "mot/iupmot_image.c"
+        "mot/iupmot_label.c"
+        "mot/iupmot_canvas.c"
+        "mot/iupmot_fontdlg.c"
+        "mot/iupmot_filedlg.c"
+        "mot/iupmot_frame.c"
+        "mot/iupmot_button.c"
+        "mot/iupmot_toggle.c"
+        "mot/iupmot_progressbar.c"
+        "mot/iupmot_clipboard.c"
+        "mot/iupmot_text.c"
+        "mot/iupmot_val.c"
+        "mot/iupmot_tabs.c"
+        "mot/iupmot_menu.c"
+        "mot/iupmot_list.c"
+        "mot/iupmot_tree.c"
+        "mot/iupmot_dragdrop.c"
+        "mot/iupmot_str.c"
+        "mot/iupmot_calendar.c"
+        "iup_datepick.c"
+
+        "mot/iupunix_help.c"
+        "mot/iupunix_info.c"
+        "mot/iupx11_info.c")
+   target_include_directories (iup
+        PRIVATE
+            $<BUILD_INTERFACE:${MOTIF_INCLUDE_DIR}>
+            $<BUILD_INTERFACE:${X11_INCLUDE_DIR}>)
+    target_link_libraries (iup
+        PRIVATE
+            ${MOTIF_LIBRARIES}
+            X11::X11
+            X11::Xt
+            m)
+    elseif (IUP_TOOLKIT MATCHES "Win32")
     target_sources (iup PRIVATE
         "win/iupwin_common.c"
         "win/iupwin_brush.c"
@@ -257,7 +409,7 @@ if (USE_WIN32)
         "win/iupwin_tree.c"
         "win/iupwin_calendar.c"
         "win/iupwin_datepick.c"
-        
+
         "win/iupwindows_main.c"
         "win/iupwindows_help.c"
         "win/iupwindows_info.c")
@@ -267,8 +419,8 @@ if (USE_WIN32)
     target_link_libraries (iup
         PRIVATE
             Comctl32)
-    
-    if (USE_NEW_DRAW)
+
+    if (IUP_NEW_DRAW)
         target_sources (iup PRIVATE
             "win/iupwin_image_wdl.c"
             "win/iupwin_draw_wdl.c"

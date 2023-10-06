@@ -1,0 +1,38 @@
+$(OBJDIR)/imlua.o: lua5/imlua.c ../include/im.h ../include/im_lib.h \
+ ../include/im_image.h ../include/im_convert.h ../include/im_image.h \
+ /tecgraf/lua54/include/lua.h /tecgraf/lua54/include/luaconf.h \
+ /tecgraf/lua54/include/lauxlib.h /tecgraf/lua54/include/lua.h \
+ ../include/imlua.h lua5/imlua_aux.h lua5/imlua_image.h \
+ lua5/imlua_palette.h
+$(OBJDIR)/imlua_aux.o: lua5/imlua_aux.c ../include/im.h ../include/im_image.h \
+ ../include/im_util.h /tecgraf/lua54/include/lua.h \
+ /tecgraf/lua54/include/luaconf.h /tecgraf/lua54/include/lauxlib.h \
+ /tecgraf/lua54/include/lua.h ../include/imlua.h lua5/imlua_aux.h \
+ lua5/imlua_image.h
+$(OBJDIR)/imlua_convert.o: lua5/imlua_convert.c ../include/im.h \
+ ../include/im_image.h ../include/im_convert.h ../include/im_image.h \
+ /tecgraf/lua54/include/lua.h /tecgraf/lua54/include/luaconf.h \
+ /tecgraf/lua54/include/lauxlib.h /tecgraf/lua54/include/lua.h \
+ ../include/imlua.h lua5/imlua_image.h lua5/imlua_aux.h \
+ lua5/lh/im_convert.lh
+$(OBJDIR)/imlua_file.o: lua5/imlua_file.c ../include/im.h ../include/im_raw.h \
+ ../include/im_image.h ../include/im_util.h ../include/im_palette.h \
+ /tecgraf/lua54/include/lua.h /tecgraf/lua54/include/luaconf.h \
+ /tecgraf/lua54/include/lauxlib.h /tecgraf/lua54/include/lua.h \
+ ../include/imlua.h lua5/imlua_aux.h lua5/imlua_image.h \
+ lua5/imlua_palette.h
+$(OBJDIR)/imlua_image.o: lua5/imlua_image.c ../include/im.h ../include/im_image.h \
+ ../include/im_util.h ../include/im_convert.h ../include/im_image.h \
+ ../include/im_palette.h /tecgraf/lua54/include/lua.h \
+ /tecgraf/lua54/include/luaconf.h /tecgraf/lua54/include/lauxlib.h \
+ /tecgraf/lua54/include/lua.h ../include/imlua.h lua5/imlua_image.h \
+ lua5/imlua_palette.h lua5/imlua_aux.h lua5/lh/im_image.lh
+$(OBJDIR)/imlua_palette.o: lua5/imlua_palette.c ../include/im.h \
+ ../include/im_image.h ../include/im_util.h ../include/im_palette.h \
+ /tecgraf/lua54/include/lua.h /tecgraf/lua54/include/luaconf.h \
+ /tecgraf/lua54/include/lauxlib.h /tecgraf/lua54/include/lua.h \
+ ../include/imlua.h lua5/imlua_aux.h lua5/imlua_palette.h
+$(OBJDIR)/imlua_util.o: lua5/imlua_util.c ../include/im.h ../include/im_util.h \
+ ../include/im_image.h /tecgraf/lua54/include/lua.h \
+ /tecgraf/lua54/include/luaconf.h /tecgraf/lua54/include/lauxlib.h \
+ /tecgraf/lua54/include/lua.h ../include/imlua.h lua5/imlua_aux.h

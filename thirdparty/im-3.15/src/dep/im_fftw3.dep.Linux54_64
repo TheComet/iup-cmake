@@ -1,0 +1,5 @@
+$(OBJDIR)/im_fft.o: process/im_fft.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_complex.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_convert.h ../include/im_image.h ../include/im_process.h \
+ ../include/im_process_pnt.h ../include/im_process_loc.h \
+ ../include/im_process_glo.h ../include/im_process_ana.h

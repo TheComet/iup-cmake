@@ -1,0 +1,10 @@
+/****************************************************/
+/* The following lines will enable Windows XP/Vista Visual Styles */
+
+#ifdef TEC_64
+1 24 "iup64.manifest"
+#else
+1 24 "iup.manifest"
+#endif
+
+/****************************************************/

@@ -1,0 +1,23 @@
+$(OBJDIR)/imlua_process.o: lua5/imlua_process.c ../include/im.h \
+ ../include/im_image.h ../include/im_process.h \
+ ../include/im_process_pnt.h ../include/im_image.h \
+ ../include/im_process_loc.h ../include/im_process_glo.h \
+ ../include/im_process_ana.h ../include/im_util.h \
+ /tecgraf/lua53/include/lua.h /tecgraf/lua53/include/luaconf.h \
+ /tecgraf/lua53/include/lauxlib.h /tecgraf/lua53/include/lua.h \
+ ../include/imlua.h lua5/imlua_aux.h lua5/imlua_image.h \
+ lua5/lh/im_process.lh
+$(OBJDIR)/imlua_kernel.o: lua5/imlua_kernel.c ../include/im.h ../include/im_image.h \
+ ../include/im_process.h ../include/im_process_pnt.h \
+ ../include/im_image.h ../include/im_process_loc.h \
+ ../include/im_process_glo.h ../include/im_process_ana.h \
+ ../include/im_util.h ../include/im_kernel.h /tecgraf/lua53/include/lua.h \
+ /tecgraf/lua53/include/luaconf.h /tecgraf/lua53/include/lauxlib.h \
+ /tecgraf/lua53/include/lua.h ../include/imlua.h lua5/imlua_aux.h \
+ lua5/imlua_image.h
+$(OBJDIR)/imlua_convert.o: lua5/imlua_convert.c ../include/im.h \
+ ../include/im_image.h ../include/im_convert.h ../include/im_image.h \
+ ../include/im_process_pnt.h /tecgraf/lua53/include/lua.h \
+ /tecgraf/lua53/include/luaconf.h /tecgraf/lua53/include/lauxlib.h \
+ /tecgraf/lua53/include/lua.h ../include/imlua.h lua5/imlua_image.h \
+ lua5/imlua_aux.h lua5/lh/im_processconvert.lh

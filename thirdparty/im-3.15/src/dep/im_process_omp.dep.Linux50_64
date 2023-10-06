@@ -1,0 +1,133 @@
+$(OBJDIR)/im_arithmetic_bin.o: process/im_arithmetic_bin.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_complex.h ../include/im_math.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h \
+ ../include/im_math_op.h ../include/im_complex.h ../include/im_color.h
+$(OBJDIR)/im_morphology_gray.o: process/im_morphology_gray.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_convert.h ../include/im_image.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_loc.h ../include/im_process_pnt.h
+$(OBJDIR)/im_quantize.o: process/im_quantize.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_palette.h ../include/im_math.h \
+ ../include/im_util.h ../include/im_convert.h ../include/im_image.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_process_ana.h
+$(OBJDIR)/im_arithmetic_un.o: process/im_arithmetic_un.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_complex.h ../include/im_math.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h \
+ ../include/im_math_op.h ../include/im_complex.h
+$(OBJDIR)/im_geometric.o: process/im_geometric.cpp ../include/im.h \
+ ../include/im_util.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_loc.h \
+ ../include/im_image.h ../include/im_math_op.h ../include/im_complex.h \
+ ../include/im_math.h ../include/im_util.h
+$(OBJDIR)/im_render.o: process/im_render.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_math.h ../include/im_util.h ../include/im_math_op.h \
+ ../include/im_complex.h ../include/im_math.h ../include/im_color.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h
+$(OBJDIR)/im_color.o: process/im_color.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_color.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_colorhsi.h ../include/im_palette.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h
+$(OBJDIR)/im_histogram.o: process/im_histogram.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h \
+ ../include/im_process_ana.h
+$(OBJDIR)/im_resize.o: process/im_resize.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_complex.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_math.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_loc.h \
+ ../include/im_image.h
+$(OBJDIR)/im_convolve.o: process/im_convolve.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_complex.h ../include/im_math.h \
+ ../include/im_util.h ../include/im_math_op.h ../include/im_complex.h \
+ ../include/im_image.h ../include/im_kernel.h ../include/im_convert.h \
+ ../include/im_image.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_loc.h \
+ ../include/im_process_pnt.h
+$(OBJDIR)/im_houghline.o: process/im_houghline.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_complex.h ../include/im_math.h \
+ ../include/im_util.h ../include/im_convert.h ../include/im_image.h \
+ ../include/im_counter.h ../include/im_process_glo.h \
+ process/im_process_counter.h
+$(OBJDIR)/im_statistics.o: process/im_statistics.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_color.h ../include/im_math.h \
+ ../include/im_util.h ../include/im_math_op.h ../include/im_complex.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_ana.h ../include/im_image.h
+$(OBJDIR)/im_convolve_rank.o: process/im_convolve_rank.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_loc.h ../include/im_image.h
+$(OBJDIR)/im_logic.o: process/im_logic.cpp ../include/im.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h
+$(OBJDIR)/im_threshold.o: process/im_threshold.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math_op.h ../include/im_complex.h \
+ ../include/im_math.h ../include/im_util.h ../include/im_colorhsi.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h \
+ ../include/im_process_ana.h
+$(OBJDIR)/im_effects.o: process/im_effects.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_math.h ../include/im_util.h ../include/im_complex.h \
+ ../include/im_math.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_pnt.h \
+ ../include/im_image.h ../include/im_math_op.h ../include/im_complex.h
+$(OBJDIR)/im_morphology_bin.o: process/im_morphology_bin.cpp ../include/im.h \
+ ../include/im_util.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_loc.h \
+ ../include/im_image.h ../include/im_process_pnt.h
+$(OBJDIR)/im_tonegamut.o: process/im_tonegamut.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_colorhsi.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_pnt.h \
+ ../include/im_image.h ../include/im_process_ana.h
+$(OBJDIR)/im_canny.o: process/im_canny.cpp ../include/im.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_loc.h ../include/im_image.h
+$(OBJDIR)/im_distance.o: process/im_distance.cpp ../include/im.h \
+ ../include/im_util.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_glo.h \
+ ../include/im_image.h
+$(OBJDIR)/im_analyze.o: process/im_analyze.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_math.h ../include/im_util.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_ana.h \
+ ../include/im_image.h ../include/im_process_pnt.h
+$(OBJDIR)/im_kernel.o: process/im_kernel.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_image.h ../include/im_kernel.h
+$(OBJDIR)/im_remotesens.o: process/im_remotesens.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_math.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h ../include/im_image.h
+$(OBJDIR)/im_point.o: process/im_point.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_math.h ../include/im_util.h ../include/im_complex.h \
+ ../include/im_math.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_pnt.h \
+ ../include/im_image.h ../include/im_math_op.h ../include/im_complex.h
+$(OBJDIR)/im_process_counter.o: process/im_process_counter.cpp \
+ process/im_process_counter.h ../include/im_counter.h
+$(OBJDIR)/im_binary.o: process/im_binary.cpp ../include/im.h ../include/im_util.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_loc.h ../include/im_image.h \
+ ../include/im_process_pnt.h
+$(OBJDIR)/im_convertbitmap.o: im_convertbitmap.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_image.h ../include/im_convert.h \
+ ../include/im_image.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_pnt.h
+$(OBJDIR)/im_convertcolor.o: im_convertcolor.cpp ../include/im.h \
+ ../include/im_util.h ../include/im_image.h ../include/im_convert.h \
+ ../include/im_image.h ../include/im_color.h ../include/im_math.h \
+ ../include/im_util.h process/im_process_counter.h \
+ ../include/im_counter.h ../include/im_process_pnt.h
+$(OBJDIR)/im_converttype.o: im_converttype.cpp ../include/im.h ../include/im_util.h \
+ ../include/im_complex.h ../include/im_math.h ../include/im_util.h \
+ ../include/im_image.h ../include/im_convert.h ../include/im_image.h \
+ ../include/im_color.h ../include/im_attrib.h ../include/im_attrib_flat.h \
+ process/im_process_counter.h ../include/im_counter.h \
+ ../include/im_process_pnt.h

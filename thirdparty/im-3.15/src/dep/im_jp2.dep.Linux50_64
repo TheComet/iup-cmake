@@ -1,0 +1,271 @@
+$(OBJDIR)/im_format_jp2.o: im_format_jp2.cpp ../include/im_format.h \
+ ../include/im_file.h ../include/im.h ../include/im_attrib.h \
+ ../include/im_attrib_flat.h ../include/im_format_jp2.h \
+ ../include/im_util.h ../include/im_counter.h libjasper2/jasper/jasper.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_version.h \
+ libjasper2/jasper/jas_init.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_fix.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_getopt.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_string.h \
+ libjasper2/jasper/jas_tmr.h libjasper2/jasper/jas_tvp.h \
+ libjasper2/jpc/jpc_enc.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_mqenc.h libjasper2/jpc/jpc_mqcod.h \
+ libjasper2/jpc/jpc_tagtree.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jpc/jpc_flt.h libjasper2/jpc/jpc_tsfb.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jpc/jpc_qmfb.h \
+ libjasper2/jp2/jp2_cod.h
+$(OBJDIR)/jas_binfile.o: jas_binfile.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_math.h ../include/im_binfile.h \
+ ../include/im_util.h
+$(OBJDIR)/jas_cm.o: libjasper2/base/jas_cm.c libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_init.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_debug.h
+$(OBJDIR)/jas_icc.o: libjasper2/base/jas_icc.c libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_string.h
+$(OBJDIR)/jas_init.o: libjasper2/base/jas_init.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jasper/jas_init.h
+$(OBJDIR)/jas_stream.o: libjasper2/base/jas_stream.c libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h
+$(OBJDIR)/jas_version.o: libjasper2/base/jas_version.c \
+ libjasper2/jasper/jas_version.h libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h
+$(OBJDIR)/jas_debug.o: libjasper2/base/jas_debug.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_debug.h
+$(OBJDIR)/jas_iccdata.o: libjasper2/base/jas_iccdata.c \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h
+$(OBJDIR)/jas_malloc.o: libjasper2/base/jas_malloc.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_math.h
+$(OBJDIR)/jas_string.o: libjasper2/base/jas_string.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_string.h
+$(OBJDIR)/jas_tmr.o: libjasper2/base/jas_tmr.c libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h libjasper2/jasper/jas_tmr.h
+$(OBJDIR)/jas_getopt.o: libjasper2/base/jas_getopt.c libjasper2/jasper/jas_getopt.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_debug.h
+$(OBJDIR)/jas_image.o: libjasper2/base/jas_image.c libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_string.h \
+ libjasper2/jasper/jas_debug.h
+$(OBJDIR)/jas_seq.o: libjasper2/base/jas_seq.c libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_malloc.h
+$(OBJDIR)/jas_tvp.o: libjasper2/base/jas_tvp.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_string.h libjasper2/jasper/jas_tvp.h
+$(OBJDIR)/jp2_cod.o: libjasper2/jp2/jp2_cod.c libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jp2/jp2_cod.h
+$(OBJDIR)/jp2_dec.o: libjasper2/jp2/jp2_dec.c libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_version.h libjasper2/jp2/jp2_cod.h \
+ libjasper2/jp2/jp2_dec.h
+$(OBJDIR)/jp2_enc.o: libjasper2/jp2/jp2_enc.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jp2/jp2_cod.h
+$(OBJDIR)/jpc_bs.o: libjasper2/jpc/jpc_bs.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jasper/jas_stream.h
+$(OBJDIR)/jpc_math.o: libjasper2/jpc/jpc_math.c libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_mqenc.o: libjasper2/jpc/jpc_mqenc.c libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jpc/jpc_mqenc.h libjasper2/jpc/jpc_mqcod.h
+$(OBJDIR)/jpc_t1enc.o: libjasper2/jpc/jpc_t1enc.c libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jpc/jpc_t1enc.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_enc.h \
+ libjasper2/jpc/jpc_t2cod.h libjasper2/jpc/jpc_cs.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_mqenc.h libjasper2/jpc/jpc_mqcod.h \
+ libjasper2/jpc/jpc_tagtree.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jpc/jpc_flt.h libjasper2/jpc/jpc_tsfb.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jpc/jpc_qmfb.h \
+ libjasper2/jpc/jpc_t1cod.h libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_tagtree.o: libjasper2/jpc/jpc_tagtree.c \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_config.h \
+ libjasper2/jasper/jas_dll.h libjasper2/jpc/jpc_tagtree.h \
+ libjasper2/jpc/jpc_bs.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_stream.h
+$(OBJDIR)/jpc_cs.o: libjasper2/jpc/jpc_cs.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jasper/jas_types.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jpc/jpc_cod.h
+$(OBJDIR)/jpc_mct.o: libjasper2/jpc/jpc_mct.c libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_math.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jasper/jas_fix.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jpc/jpc_mct.h
+$(OBJDIR)/jpc_qmfb.o: libjasper2/jpc/jpc_qmfb.c libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jpc/jpc_qmfb.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jpc/jpc_tsfb.h libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_t2cod.o: libjasper2/jpc/jpc_t2cod.c libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jpc/jpc_cod.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_tsfb.o: libjasper2/jpc/jpc_tsfb.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_math.h \
+ libjasper2/jpc/jpc_tsfb.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jasper/jas_fix.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jpc/jpc_qmfb.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jpc/jpc_util.h libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_dec.o: libjasper2/jpc/jpc_dec.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_math.h libjasper2/jasper/jas_tvp.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jasper/jas_fix.h \
+ libjasper2/jpc/jpc_dec.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jpc/jpc_tsfb.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jpc/jpc_qmfb.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jpc/jpc_tagtree.h libjasper2/jpc/jpc_cs.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_mqdec.h libjasper2/jpc/jpc_mqcod.h \
+ libjasper2/jpc/jpc_t2cod.h libjasper2/jpc/jpc_mct.h \
+ libjasper2/jpc/jpc_t2dec.h libjasper2/jpc/jpc_t1dec.h \
+ libjasper2/jpc/jpc_t1cod.h libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_mqcod.o: libjasper2/jpc/jpc_mqcod.c libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jpc/jpc_mqcod.h libjasper2/jasper/jas_types.h
+$(OBJDIR)/jpc_t1cod.o: libjasper2/jpc/jpc_t1cod.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_math.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_dec.h \
+ libjasper2/jpc/jpc_tsfb.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jpc/jpc_qmfb.h \
+ libjasper2/jpc/jpc_tagtree.h libjasper2/jpc/jpc_cs.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_mqdec.h libjasper2/jpc/jpc_mqcod.h \
+ libjasper2/jpc/jpc_t2cod.h libjasper2/jpc/jpc_t1cod.h
+$(OBJDIR)/jpc_t2dec.o: libjasper2/jpc/jpc_t2dec.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_fix.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jpc/jpc_dec.h libjasper2/jpc/jpc_tsfb.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jpc/jpc_qmfb.h libjasper2/jpc/jpc_tagtree.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jpc/jpc_cod.h libjasper2/jpc/jpc_mqdec.h \
+ libjasper2/jpc/jpc_mqcod.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_t2dec.h libjasper2/jpc/jpc_t1cod.h \
+ libjasper2/jpc/jpc_math.h
+$(OBJDIR)/jpc_util.o: libjasper2/jpc/jpc_util.c libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jpc/jpc_cs.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_cm.h \
+ libjasper2/jasper/jas_icc.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_flt.h libjasper2/jpc/jpc_util.h
+$(OBJDIR)/jpc_enc.o: libjasper2/jpc/jpc_enc.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_string.h libjasper2/jasper/jas_malloc.h \
+ libjasper2/jasper/jas_image.h libjasper2/jasper/jas_stream.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jasper/jas_fix.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_tvp.h libjasper2/jasper/jas_version.h \
+ libjasper2/jpc/jpc_flt.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jpc/jpc_tagtree.h libjasper2/jpc/jpc_bs.h \
+ libjasper2/jpc/jpc_enc.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jpc/jpc_cod.h \
+ libjasper2/jpc/jpc_mqenc.h libjasper2/jpc/jpc_mqcod.h \
+ libjasper2/jpc/jpc_tsfb.h libjasper2/jpc/jpc_qmfb.h \
+ libjasper2/jpc/jpc_mct.h libjasper2/jpc/jpc_t1enc.h \
+ libjasper2/jpc/jpc_t1cod.h libjasper2/jpc/jpc_t2enc.h \
+ libjasper2/jpc/jpc_math.h libjasper2/jpc/jpc_util.h
+$(OBJDIR)/jpc_mqdec.o: libjasper2/jpc/jpc_mqdec.c libjasper2/jasper/jas_types.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jasper/jas_debug.h libjasper2/jpc/jpc_mqdec.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_mqcod.h
+$(OBJDIR)/jpc_t1dec.o: libjasper2/jpc/jpc_t1dec.c libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jasper/jas_math.h \
+ libjasper2/jpc/jpc_bs.h libjasper2/jpc/jpc_mqdec.h \
+ libjasper2/jpc/jpc_mqcod.h libjasper2/jpc/jpc_t1dec.h \
+ libjasper2/jpc/jpc_dec.h libjasper2/jpc/jpc_tsfb.h \
+ libjasper2/jasper/jas_seq.h libjasper2/jpc/jpc_fix.h \
+ libjasper2/jpc/jpc_qmfb.h libjasper2/jpc/jpc_tagtree.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jpc/jpc_cod.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_t1cod.h
+$(OBJDIR)/jpc_t2enc.o: libjasper2/jpc/jpc_t2enc.c libjasper2/jasper/jas_fix.h \
+ libjasper2/jasper/jas_config.h libjasper2/jasper/jas_dll.h \
+ libjasper2/jasper/jas_types.h libjasper2/jasper/jas_debug.h \
+ libjasper2/jasper/jas_malloc.h libjasper2/jasper/jas_math.h \
+ libjasper2/jpc/jpc_flt.h libjasper2/jpc/jpc_t2enc.h \
+ libjasper2/jpc/jpc_enc.h libjasper2/jasper/jas_seq.h \
+ libjasper2/jasper/jas_stream.h libjasper2/jpc/jpc_t2cod.h \
+ libjasper2/jpc/jpc_cs.h libjasper2/jasper/jas_image.h \
+ libjasper2/jasper/jas_cm.h libjasper2/jasper/jas_icc.h \
+ libjasper2/jpc/jpc_cod.h libjasper2/jpc/jpc_mqenc.h \
+ libjasper2/jpc/jpc_mqcod.h libjasper2/jpc/jpc_tagtree.h \
+ libjasper2/jpc/jpc_bs.h libjasper2/jpc/jpc_tsfb.h \
+ libjasper2/jpc/jpc_fix.h libjasper2/jpc/jpc_qmfb.h \
+ libjasper2/jpc/jpc_math.h

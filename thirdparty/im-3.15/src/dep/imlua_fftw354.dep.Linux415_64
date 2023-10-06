@@ -1,0 +1,8 @@
+$(OBJDIR)/imlua_fftw.o: lua5/imlua_fftw.c ../include/im.h ../include/im_image.h \
+ ../include/im_process.h ../include/im_process_pnt.h \
+ ../include/im_image.h ../include/im_process_loc.h \
+ ../include/im_process_glo.h ../include/im_process_ana.h \
+ ../include/im_util.h /tecgraf/lua54/include/lua.h \
+ /tecgraf/lua54/include/luaconf.h /tecgraf/lua54/include/lauxlib.h \
+ /tecgraf/lua54/include/lua.h ../include/imlua.h lua5/imlua_aux.h \
+ lua5/imlua_image.h lua5/lh/im_fftw.lh

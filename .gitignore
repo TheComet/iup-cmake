@@ -1,4 +1,9 @@
 /build*
+/bin
+/obj
+/lib
+/srcledc/ledc
 CMakeLists.txt.user
 *.autosave
-
+*.swp
+*.dep*

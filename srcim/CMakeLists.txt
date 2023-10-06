@@ -9,5 +9,5 @@ target_compile_definitions (iupim
         $<$<CONFIG:Debug>:IUP_ASSERT>)
 target_link_libraries (iupim
     PRIVATE
-        iup)
-
+        iup
+        im)

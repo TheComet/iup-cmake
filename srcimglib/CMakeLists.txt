@@ -6,12 +6,8 @@ add_library (iupimglib
     "iup_image_library.c"
     "iup_imglib_circleprogress.c")
 target_include_directories (iupimglib
-    PUBLIC
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../include>
-        $<INSTALL_INTERFACE:include>
     PRIVATE
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../src>)
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
 target_compile_definitions (iupimglib
     PRIVATE
         $<$<PLATFORM_ID:Windows>:WIN32>
@@ -19,6 +15,9 @@ target_compile_definitions (iupimglib
         IUPIMGLIB_BUILD_LIBRARY
         IUP_IMGLIB_LARGE_ICON
         $<$<BOOL:${IUP_IMGLIB_LARGE}>:IUP_IMGLIB_LARGE>)
+target_link_libraries (iupimglib
+    PRIVATE
+        iup)
 
 if (IUP_TOOLKIT MATCHES "Motif")
     target_sources (iupimglib PRIVATE

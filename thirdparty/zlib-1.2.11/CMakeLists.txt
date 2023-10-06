@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.21)
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 
-project(zlib
-	VERSION 1.2.11
-    LANGUAGES C)
-
 set(VERSION "1.2.11")
+
+project(zlib
+    VERSION ${VERSION}
+    LANGUAGES C)
 
 option(ASM686 "Enable building i686 assembly implementation")
 option(AMD64 "Enable building amd64 assembly implementation")
@@ -64,7 +64,7 @@ endif()
 
 set(ZLIB_PC ${CMAKE_CURRENT_BINARY_DIR}/zlib.pc)
 configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/zlib.pc.cmakein
-		${ZLIB_PC} @ONLY)
+        ${ZLIB_PC} @ONLY)
 configure_file("zconf.h.cmakein" "zconf.h" @ONLY)
 
 #============================================================================
@@ -72,29 +72,29 @@ configure_file("zconf.h.cmakein" "zconf.h" @ONLY)
 #============================================================================
 
 add_library(zlibstatic STATIC
-	"src/adler32.c"
-	"src/compress.c"
-	"src/crc32.c"
-	"src/deflate.c"
-	"src/gzclose.c"
-	"src/gzlib.c"
-	"src/gzread.c"
-	"src/gzwrite.c"
-	"src/infback.c"
-	"src/inffast.c"
-	"src/inflate.c"
-	"src/inftrees.c"
-	"src/trees.c"
-	"src/uncompr.c"
-	"src/zutil.c")
+    "src/adler32.c"
+    "src/compress.c"
+    "src/crc32.c"
+    "src/deflate.c"
+    "src/gzclose.c"
+    "src/gzlib.c"
+    "src/gzread.c"
+    "src/gzwrite.c"
+    "src/infback.c"
+    "src/inffast.c"
+    "src/inflate.c"
+    "src/inftrees.c"
+    "src/trees.c"
+    "src/uncompr.c"
+    "src/zutil.c")
 
-target_compile_definitions(zlibstatic 
-	PRIVATE $<$<BOOL:${HAVE_OFF64_T}>:_LARGEFILE64_SOURCE=1>)
+target_compile_definitions(zlibstatic
+    PRIVATE $<$<BOOL:${HAVE_OFF64_T}>:_LARGEFILE64_SOURCE=1>)
 
-target_include_directories(zlibstatic 
-	PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/public>
-	PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/private>
-	PUBLIC $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>)
+target_include_directories(zlibstatic
+    PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/public>
+    PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/private>
+    PUBLIC $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>)
 
 if(ZLIB_PIC)
     set_target_properties (zlibstatic
@@ -108,30 +108,30 @@ if(CMAKE_COMPILER_IS_GNUCC)
         set(ZLIB_ASMS "contrib/amd64/amd64-match.S")
     endif ()
 
-	if(ZLIB_ASMS)
-		target_sources(zlibstatic PRIVATE ${ZLIB_ASMS})
-		target_compile_definitions(zlibstatic PRIVATE DASMV)
+    if(ZLIB_ASMS)
+        target_sources(zlibstatic PRIVATE ${ZLIB_ASMS})
+        target_compile_definitions(zlibstatic PRIVATE DASMV)
         set_source_files_properties(${ZLIB_ASMS} PROPERTIES LANGUAGE C COMPILE_FLAGS -DNO_UNDERLINE)
-	endif()
+    endif()
 endif()
 
 if(MSVC)
     if(ASM686)
-		enable_language(ASM_MASM)
+        enable_language(ASM_MASM)
         set(ZLIB_ASMS
-			"contrib/masmx86/inffas32.asm"
-			"contrib/masmx86/match686.asm")
+            "contrib/masmx86/inffas32.asm"
+            "contrib/masmx86/match686.asm")
     elseif (AMD64)
-		enable_language(ASM_MASM)
+        enable_language(ASM_MASM)
         set(ZLIB_ASMS
-			"contrib/masmx64/gvmat64.asm"
-			"contrib/masmx64/inffasx64.asm")
+            "contrib/masmx64/gvmat64.asm"
+            "contrib/masmx64/inffasx64.asm")
     endif()
 
-	if(ZLIB_ASMS)
-		target_sources(zlibstatic PRIVATE ${ZLIB_ASMS})
-		target_compile_definitions(ASMV ASMINF)
-	endif()
+    if(ZLIB_ASMS)
+        target_sources(zlibstatic PRIVATE ${ZLIB_ASMS})
+        target_compile_definitions(ASMV ASMINF)
+    endif()
 endif()
 
 # parse the full version number from zlib.h and include in ZLIB_FULL_VERSION
@@ -148,11 +148,11 @@ if(UNIX)
 endif ()
 
 if(MSVC)
-	set_target_properties(zlibstatic
-		PROPERTIES
-			MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
-			DEBUG_POSTFIX "d")
-	target_compile_definitions(zlibstatic
-		PRIVATE _CRT_SECURE_NO_DEPRECATE 
-		PRIVATE _CRT_NONSTDC_NO_DEPRECATE)
+    set_target_properties(zlibstatic
+        PROPERTIES
+            MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+            DEBUG_POSTFIX "d")
+    target_compile_definitions(zlibstatic
+        PRIVATE _CRT_SECURE_NO_DEPRECATE
+        PRIVATE _CRT_NONSTDC_NO_DEPRECATE)
 endif()

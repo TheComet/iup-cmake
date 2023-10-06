@@ -92,24 +92,24 @@ if (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
         "src/cairo/cdcaironative_gdk.c")
     target_include_directories (cd
         PRIVATE
-            ${HARFBUZZ_INCLUDE_DIR}
-            ${GDK3_INCLUDE_DIRS})
+            ${HARFBUZZ_INCLUDE_DIR})
     target_link_libraries (cd
         PRIVATE
             Cairo::Cairo
             pango-1.0
             freetype
-            ${HARFBUZZ_LIBRARY}
-            ${GDK3_LIBRARY})
+            ${HARFBUZZ_LIBRARY})
 
     if (IUP_TOOLKIT MATCHES "GTK3")
+        find_package (GTK3 REQUIRED)
         target_sources (cd PRIVATE
             "src/gdk/cdgdkclp.c")
-        target_compile_definitions (cd
-            PRIVATE
-                GDK_DISABLE_DEPRECATED
-                GSEAL_ENABLE
-                USE_GTK3)
+        target_compile_definitions (cd PRIVATE
+            GDK_DISABLE_DEPRECATED
+            GSEAL_ENABLE
+            USE_GTK3)
+        target_include_directories (cd PRIVATE
+            ${GTK3_INCLUDE_DIRS})
     else ()
         find_package (GTK2 REQUIRED)
         target_sources (cd PRIVATE

@@ -4,6 +4,8 @@ project (ftgl
     VERSION 2.1.5
     LANGUAGES CXX)
 
+option (FTGL_PIC "Compile with position independent code" OFF)
+
 add_library (ftgl
     "src/FTBuffer.cpp"
     "src/FTCharmap.cpp"
@@ -55,4 +57,5 @@ target_link_libraries (ftgl
     PRIVATE
         freetype)
 set_target_properties (ftgl PROPERTIES
-    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+    POSITION_INDEPENDENT_CODE ${FTGL_PIC})

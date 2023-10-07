@@ -2,6 +2,8 @@ project (cd
     VERSION 5.14
     LANGUAGES C)
 
+option (CD_PIC "Compile with position independent code" OFF)
+
 add_library (cd
     # common
     "src/cd.c"
@@ -75,9 +77,10 @@ target_include_directories (cd
 target_link_libraries (cd
     PRIVATE
         freetype
-        zlibstatic)
+        ZLIB::ZLIB)
 set_target_properties (cd PROPERTIES
-    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+    POSITION_INDEPENDENT_CODE ${CD_PIC})
 
 if (IUP_TOOLKIT MATCHES "GTK2" OR IUP_TOOLKIT MATCHES "GTK3")
     find_package (Cairo REQUIRED)

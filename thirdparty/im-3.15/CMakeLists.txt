@@ -2,6 +2,8 @@ project (im
     LANGUAGES C CXX
     VERSION 3.15)
 
+option (IM_PIC "Compile with position independent code" OFF)
+
 include (TestBigEndian)
 test_big_endian (WORDS_BIGENDIAN)
 
@@ -70,7 +72,7 @@ target_include_directories (im
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/libjpeg>)
 
 # tif required zlib -- higher level project should include zlib before im
-target_link_libraries (im PRIVATE zlibstatic)
+target_link_libraries (im PRIVATE ZLIB::ZLIB)
 
 if (CMAKE_SYSTEM_NAME MATCHES Windows)
     find_package (PNG)
@@ -105,4 +107,5 @@ endif ()
 
 set_target_properties (im PROPERTIES
     DEBUG_POSTFIX "d"
-    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+    POSITION_INDEPENDENT_CODE ${IM_PIC})

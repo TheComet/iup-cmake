@@ -4,6 +4,8 @@ project (freetype
     VERSION 2.10.2
     LANGUAGES C)
 
+option (FREETYPE_PIC "Compile with position independent code" ${FTGL_PIC})
+
 add_library (freetype
     "src/autofit/autofit.c"
     "src/bdf/bdf.c"
@@ -58,6 +60,7 @@ target_compile_definitions (freetype
         FT_CONFIG_OPTION_SYSTEM_ZLIB)
 target_link_libraries (freetype
     PRIVATE
-        zlibstatic)
+        ZLIB::ZLIB)
 set_target_properties (freetype PROPERTIES
-    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>)
+    MSVC_RUNTIME_LIBRARY MultiThreaded$<$<CONFIG:Debug>:Debug>
+    POSITION_INDEPENDENT_CODE ${FREETYPE_PIC})

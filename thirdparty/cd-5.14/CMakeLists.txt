@@ -143,5 +143,5 @@ elseif (IUP_TOOLKIT MATCHES "Win32")
         "src/win32/wmf_emf.c"
         "src/win32/cdwdbuf.c"
         "src/win32/cdwdib.c")
-    target_compile_definitions (cd PRIVATE UNICODE)
+    target_compile_definitions (cd PRIVATE UNICODE WIN32)
 endif ()

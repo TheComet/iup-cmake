@@ -52,7 +52,8 @@ target_include_directories (ftgl
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>)
 target_compile_definitions (ftgl
     PRIVATE
-        $<$<CONFIG:Debug>:IUP_ASSERT>)
+        $<$<CONFIG:Debug>:IUP_ASSERT>
+        FTGL_LIBRARY_STATIC)
 target_link_libraries (ftgl
     PRIVATE
         freetype)
